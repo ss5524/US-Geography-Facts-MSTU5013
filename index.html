@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Geography State Facts</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
+
+<body>
+  <div class="nav-bar">
+    <h1>US Geography State Quiz</h1>
+  </div>
+
+  <div id="app">
+
+    <h2>What State is This?</h2>
+    <div class="image">
+      <img :src="state.image" alt="Nevada">
+    </div>
+
+    <div class="state">
+
+      <p>{{ state.capital }}</p>
+      <p>{{ state.nickname }}</p>
+      <p>{{ state.population }}</p>
+      <p>{{ state.bird }}</p>
+      <p>{{ state.fact }}</p>
+    </div>
+    <br>
+    <hr>
+    <label for="stateName"><em><strong>State Name:</strong></em>
+      <input type="text" id="state" v-model="newState">
+    </label>
+    <label for="userName"><em><strong>User Name:</strong></em>
+      <input type="text" id="userName" v-model="name">
+    </label>
+    <button @click="submitStateNew">Submit Answer</button>
+    <br>
+    <br>
+  </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+
+  <!-- Add SDKs for Firebase Firestore-->
+  <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCoC9GMh8Txi47e7imfh2Plc4XTNq6cDME",
+      authDomain: "testtwo5013.firebaseapp.com",
+      databaseURL: "https://testtwo5013.firebaseio.com",
+      projectId: "testtwo5013",
+      storageBucket: "testtwo5013.appspot.com",
+      messagingSenderId: "654165949870",
+      appId: "1:654165949870:web:2c5185ebf177b1364a5c3f",
+      measurementId: "G-LHQDW325VS"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
